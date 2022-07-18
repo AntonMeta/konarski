@@ -64,3 +64,9 @@ body
     bottom: 19px;
     right: 29px;
 }
+.navbar{
+    display: block;
+    background-color: black;
+    font-size: 50px;
+    color: white;
+}
