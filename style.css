@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html
+{
+    scroll-behavior: smooth;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: "Poppins", sans-serif;
+}
+.sidenav a
+{
+    position: fixed;
+    left: -275px; 
+    transition: 0.3s; 
+    padding: 15px; 
+    width: 350px;
+    text-decoration: none;
+    font-size: 23px; 
+    color: white; 
+    border-radius: 0 5px 5px 0; 
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    text-align: right;
+    z-index: 99;
+    vertical-align: top;
+}
+.sidenav a:hover
+{
+    left: 0;
+}
+#mobi 
+{
+    bottom: 20px;
+    background-color: rgb(0, 0, 100);
+}
+.ScrollUpBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    background-color: navy;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    opacity: 0.5;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.ScrollUpBtn:hover {
+    opacity: 1;
+    font-size: 20px;
+    transition: all 0.1s ease-out;
+    bottom: 19px;
+    right: 29px;
+}
