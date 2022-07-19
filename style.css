@@ -49,7 +49,7 @@ body {
     right: 30px;
     z-index: 99;
     font-size: 18px;
-    background-color: navy;
+    background-color: #00482d;
     color: white;
     padding: 15px;
     border-radius: 4px;
@@ -190,6 +190,7 @@ body {
 
 .overlay-sidebar {
     position: relative;
+    top: 100px;
     visibility: hidden;
     height: 100%;
     overflow-y: auto;
@@ -197,9 +198,9 @@ body {
 }
 
 .overlay-sidebar ol {
-    height: 100%;
+
     width: 100%;
-    margin-top: 100px;
+
     padding: 0px 50px 0;
     list-style: none;
     display: list-item;
@@ -221,11 +222,14 @@ body {
     background-size: 0 1px;
     font-size: 56px;
     color: #fff;
+    position: relative;
 }
 
-.overlay-sidebar ol li button span:after {
+
+
+.overlay-sidebar ol li button span::after {
     content: '';
-    position: relative;
+    position: absolute;
     width: 100%;
     transform: scaleX(0);
     height: 1px;
