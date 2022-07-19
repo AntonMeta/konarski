@@ -274,7 +274,7 @@ body {
     transition: transform 0.2s ease-out;
 }
 
-.overlay-sidebar ol li button span:hover:after {
+.overlay-sidebar ol li button span:hover:after, .overlay-sidebar ol li button span.active:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }

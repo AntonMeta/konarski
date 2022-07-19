@@ -43,12 +43,13 @@ function initMap() {
 
 window.initMap = initMap;
 
-/*function showChild(n) {
-    if () {
-        document.getElementsByClassName("overlay-sidebar-children")[n].style.visibility = "visible";
+function showChild(n) {
+    n.classList.toggle("active");
+    // if () {
+    //     document.getElementsByClassName("overlay-sidebar-children")[n].style.visibility = "visible";
 
-    }
-    else {
-        document.getElementsByClassName("overlay-sidebar-children")[n].style.visibility = "hidden";
-    }
-}*/
+    // }
+    // else {
+    //     document.getElementsByClassName("overlay-sidebar-children")[n].style.visibility = "hidden";
+    // }
+}
