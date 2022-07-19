@@ -27,3 +27,18 @@ function openNav() {
         document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "hidden";
     }
 }
+
+function initMap(){
+    const loc = {lat: 50.04473910905056, lng: 19.211139311098908 };
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 16,
+        center: loc,
+    });
+
+    const marker = new google.maps.Marker({
+        position: loc,
+        map: map,
+    });
+}
+
+window.initMap = initMap;
