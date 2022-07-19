@@ -21,15 +21,17 @@ function openNav() {
     if (menu.classList.contains('opened')) {
         document.getElementById("myNav").style.height = "100%";
         document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "visible";
+        document.getElementsByClassName("overlay-sidebar-children")[0].style.visibility = "visible";
     }
     else {
         document.getElementById("myNav").style.height = "0%";
         document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "hidden";
+        document.getElementsByClassName("overlay-sidebar-children")[0].style.visibility = "hidden";
     }
 }
 
-function initMap(){
-    const loc = {lat: 50.04473910905056, lng: 19.211139311098908 };
+function initMap() {
+    const loc = { lat: 50.04473910905056, lng: 19.211139311098908 };
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 16,
         center: loc,

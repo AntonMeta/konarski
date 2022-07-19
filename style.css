@@ -47,7 +47,7 @@ body {
     position: fixed;
     bottom: 20px;
     right: 30px;
-    z-index: 99;
+    z-index: 3;
     font-size: 18px;
     background-color: #00482d;
     color: white;
@@ -89,7 +89,7 @@ body {
     display: flex;
     padding: 0;
     transform: translate(25px, -100px);
-    position: absolute;
+    position: fixed;
     z-index: 99;
     -webkit-text-stroke: 1px red;
 }
@@ -178,18 +178,23 @@ body {
 .about {
     width: 100%;
     height: fit-content;
-    color: white;
-    background-color: #00482d;
+    color: #00482d;
+    background-color: #fff;
     text-align: justify;
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 2%;
-    margin-bottom: 2%;
+    padding-bottom: 2%;
 }
 
 .about h1 {
-    text-align: center; 
+    text-align: center;
     padding-bottom: 2%;
+}
+
+.about p {
+    color: #1e1e1e;
+
 }
 
 #map {
@@ -207,8 +212,9 @@ body {
     left: 0;
     top: 0;
     height: 0;
-    z-index: 0;
+    z-index: 4;
     transition: 0.5s;
+    display: inline-block;
 }
 
 .overlay-sidebar {
@@ -218,11 +224,13 @@ body {
     height: 100%;
     overflow-y: auto;
     width: 25%;
+    margin-right: 0;
+
 }
 
 .overlay-sidebar ol {
 
-    width: 100%;
+    width: 25%;
 
     padding: 0px 50px 0;
     list-style: none;
@@ -264,6 +272,64 @@ body {
 }
 
 .overlay-sidebar ol li button span:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.overlay-sidebar-children {
+    position: relative;
+    top: 100px;
+    visibility: hidden;
+    height: 100%;
+    overflow-y: auto;
+    width: 25%;
+    left: 25%;
+}
+
+.overlay-sidebar-children ol {
+
+    width: 100%;
+
+    padding: 0px 50px 0;
+    list-style: none;
+    display: list-item;
+    position: relative;
+}
+
+.overlay-sidebar-children ol li button {
+    border: none;
+    padding: 0;
+    background: none;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+
+.overlay-sidebar-children ol li button span {
+    text-decoration: none;
+    background-position: 0 100%;
+    background-size: 0 1px;
+    font-size: 56px;
+    color: #fff;
+    position: relative;
+}
+
+
+
+.overlay-sidebar-children ol li button span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom left;
+    transition: transform 0.2s ease-out;
+}
+
+.overlay-sidebar-children ol li button span:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
