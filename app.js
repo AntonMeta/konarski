@@ -43,13 +43,8 @@ function initMap() {
 
 window.initMap = initMap;
 
-function showChild(n) {
-    n.classList.toggle("active");
-    // if () {
-    //     document.getElementsByClassName("overlay-sidebar-children")[n].style.visibility = "visible";
-
-    // }
-    // else {
-    //     document.getElementsByClassName("overlay-sidebar-children")[n].style.visibility = "hidden";
-    // }
+function showChild(a, n) {
+    a.classList.toggle("active");
+    var nigger = n + '';
+    document.getElementById("child" + nigger).classList.toggle("active");
 }
