@@ -87,6 +87,8 @@ body {
     display: flex;
     padding: 0;
     transform: translateY(-100px);
+    position: absolute;
+    z-index: 99;
 }
 
 .line {
@@ -139,6 +141,8 @@ body {
     text-shadow: none;
     left: 0;
     top: 0;
+    z-index: 0;
+    transition: 0.5s;
 }
 
 #myNav {
@@ -148,6 +152,7 @@ body {
 .overlay-sidebar {
     position: relative;
     margin-right: 40px;
+    visibility: hidden;
 }
 
 .overlay-sidebar ol {
@@ -193,4 +198,37 @@ body {
     50% {
         border-color: white;
     }
+}
+
+.overlay {
+    width: 100%;
+    position: fixed;
+    background: #1e1e1e;
+    color: #fff;
+    text-shadow: none;
+    left: 0;
+    top: 0;
+    height: 0;
+    z-index: 0;
+    transition: 0.5s;
+}
+
+.overlay-sidebar {
+    position: relative;
+    margin-right: 40px;
+    visibility: hidden;
+}
+
+.overlay-sidebar ol {
+    margin-top: 100px;
+    padding: 0px 20px 0;
+    list-style: none;
+    display: list-item;
+    position: relative;
+}
+
+.overlay-sidebar ol li span {
+    text-decoration: none;
+    background-position: 0 100%;
+    background-size: 0 1px;
 }

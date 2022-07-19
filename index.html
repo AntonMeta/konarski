@@ -13,8 +13,8 @@
         <div class="navbar">
             <h1>Liceum Ogólnokształcące im. ks. Stanisława Konarskiego</h1>
         </div>
-        <button class="menu"
-            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+        <button id="navBtn" class="menu"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'));openNav()"
             aria-label="Main Menu">
             <svg width="100" height="100" viewBox="0 0 100 100">
                 <path class="line line1"
@@ -23,16 +23,36 @@
                 <path class="line line3"
                     d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
             </svg>
-        </button>
-
+        </button> 
+        </div>
+        <div id="myNav" class="overlay">
+            <div class="overlay-sidebar">
+                <ol>
+                    <li>
+                        <button>
+                            <span>link1</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <span>link1</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <span>link1</span>
+                        </button>
+                    </li>
+                </ol>
+            </div>
         </div>
     </nav>
-    <div class="sidenav">
-        <a href="https://pz1oswiecim.mobidziennik.pl/dziennik/planlekcji?typ=podstawowy" id="mobi">Dzeinnik
-            elektroniczny &nbsp;<img
-                src="https://play-lh.googleusercontent.com/WHn_-Bt64YIhAwZT36THXR-ITadN51UOVP5oCS4GxKie44cQle1_XiArIm55zEDdrug2"
-                height="50" width=auto></a>
-    </div>
+    <!-- <div class="sidenav"> -->
+    <!--     <a href="https://pz1oswiecim.mobidziennik.pl/dziennik/planlekcji?typ=podstawowy" id="mobi">Dzeinnik -->
+    <!--         elektroniczny &nbsp;<img -->
+    <!--             src="https://play-lh.googleusercontent.com/WHn_-Bt64YIhAwZT36THXR-ITadN51UOVP5oCS4GxKie44cQle1_XiArIm55zEDdrug2" -->
+    <!--             height="50" width=auto></a> -->
+    <!-- </div> -->
     
     <div class="main-photo">
         <div class="text">
