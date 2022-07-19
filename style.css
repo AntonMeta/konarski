@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
 
 html {
     scroll-behavior: smooth;
@@ -190,6 +191,7 @@ body {
 .about h1 {
     text-align: center;
     padding-bottom: 2%;
+    font-family: 'Noto Serif', serif;
 }
 
 .about p {
@@ -254,6 +256,7 @@ body {
     font-size: 56px;
     color: #fff;
     position: relative;
+    font-family: 'Noto Serif', serif;
 }
 
 
@@ -276,14 +279,28 @@ body {
     transform-origin: bottom left;
 }
 
+.sidebar-active:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(1);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom left;
+}
+
 .overlay-sidebar-children {
-    position: relative;
+    position: fixed;
     top: 100px;
     visibility: hidden;
     height: 100%;
     overflow-y: auto;
     width: 25%;
     left: 25%;
+    display: block;
+    z-index: 5;
 }
 
 .overlay-sidebar-children ol {
@@ -309,27 +326,13 @@ body {
     text-decoration: none;
     background-position: 0 100%;
     background-size: 0 1px;
-    font-size: 56px;
+    font-size: 40px;
     color: #fff;
     position: relative;
 }
 
 
 
-.overlay-sidebar-children ol li button span::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform-origin: bottom left;
-    transition: transform 0.2s ease-out;
-}
+.overlay-sidebar-children ol li button span::after {}
 
-.overlay-sidebar-children ol li button span:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
+.overlay-sidebar-children ol li button span:hover:after {}

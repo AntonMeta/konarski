@@ -21,12 +21,10 @@ function openNav() {
     if (menu.classList.contains('opened')) {
         document.getElementById("myNav").style.height = "100%";
         document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "visible";
-        document.getElementsByClassName("overlay-sidebar-children")[0].style.visibility = "visible";
     }
     else {
         document.getElementById("myNav").style.height = "0%";
         document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "hidden";
-        document.getElementsByClassName("overlay-sidebar-children")[0].style.visibility = "hidden";
     }
 }
 
@@ -44,3 +42,13 @@ function initMap() {
 }
 
 window.initMap = initMap;
+
+/*function showChild(n) {
+    if () {
+        document.getElementsByClassName("overlay-sidebar-children")[n].style.visibility = "visible";
+
+    }
+    else {
+        document.getElementsByClassName("overlay-sidebar-children")[n].style.visibility = "hidden";
+    }
+}*/
