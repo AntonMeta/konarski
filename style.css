@@ -87,7 +87,8 @@ body {
     display: flex;
     padding: 0;
     transform: translateY(-100px);
-    z-index: 10;
+    position: absolute;
+    z-index: 99;
 }
 
 .line {
@@ -141,12 +142,14 @@ body {
     left: 0;
     top: 0;
     height: 0;
-    z-index: 9;
+    z-index: 0;
+    transition: 0.5s;
 }
 
 .overlay-sidebar {
     position: relative;
     margin-right: 40px;
+    visibility: hidden;
 }
 
 .overlay-sidebar ol {

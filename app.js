@@ -18,11 +18,12 @@ function topFunction() {
 
 var menu = document.getElementById("navBtn");
 function openNav() {
-
     if (menu.classList.contains('opened')) {
-        document.getElementById("myNav").style.height = "100%"
+        document.getElementById("myNav").style.height = "100%";
+        document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "visible";
     }
     else {
-        document.getElementById("myNav").style.height = "0%"
+        document.getElementById("myNav").style.height = "0%";
+        document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "hidden";
     }
 }
