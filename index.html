@@ -13,8 +13,8 @@
         <div class="navbar">
             <h1>Liceum Ogólnokształcące im. ks. Stanisława Konarskiego</h1>
         </div>
-        <div class="container" onclick="this.classList.toggle('active')">
-            <svg id="siema" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
+        <div id="navBtn" class="container" onclick="this.classList.toggle('active')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 200 200">
                 <g stroke-width="6.5" stroke-linecap="round">
                     <path d="M72 82.286h28.75" fill="#009100" fill-rule="evenodd" stroke="#fff" />
                     <path
@@ -28,6 +28,28 @@
                     <path d="M100.75 125.143h28.75" fill="#009100" fill-rule="evenodd" stroke="#fff" />
                 </g>
             </svg>
+        </div>
+        <div id="myNav" class="overlay">
+            <div class="overlay-sidebar">
+                <ol>
+                    <li>
+                        <button>
+                            <span>link1</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <span>link1</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button>
+                            <span>link1</span>
+                        </button>
+                    </li>
+                </ol>
+            </div>
+
         </div>
     </nav>
     <div class="sidenav">
