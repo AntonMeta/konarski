@@ -37,7 +37,7 @@ function openNav() {
         }
 
         var btn = document.getElementsByClassName("anim");
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 5; i++) {
             btn[i].classList.remove("animate__animated", "animate__fadeInDown");
         }
 
@@ -65,7 +65,7 @@ window.initMap = initMap;
 function showChild(a, n) {
     if (a.classList.contains("active")) {
         var spans = document.getElementsByClassName("span_first");
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 6; i++) {
             if (spans[i].classList.contains("noactive")) {
                 spans[i].classList.toggle("noactive");
             }
@@ -80,13 +80,13 @@ function showChild(a, n) {
         }
     } else {
         var spans = document.getElementsByClassName("span_first");
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 6; i++) {
             if (spans[i].classList.contains("noactive")) {
                 spans[i].classList.toggle("noactive");
             }
         }
 
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 6; i++) {
             if (spans[i].classList.contains("active")) {
                 if (a != spans[i]) {
                     spans[i].classList.toggle("active");
@@ -96,7 +96,7 @@ function showChild(a, n) {
         }
 
         ///////////////////////////////////
-        for (var i = 0; i < 4; i++) {
+        for (var i = 0; i < 6; i++) {
             spans[i].classList.toggle("noactive");
         }
 
@@ -116,7 +116,17 @@ function showChild(a, n) {
 }
 function slideIn() {
     var btn = document.getElementsByClassName("anim");
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < 6; i++) {
         btn[i].classList.add("animate__animated", "animate__fadeInDown");
+    }
+}
+function slideInLeft() {
+    var btn = document.getElementsByClassName("anim2");
+    for (var i = 0; i < 12; i++) {
+        btn[i].classList.remove("animate__animated", "animate__fadeInLeft");
+    }
+
+    for (var i = 0; i < 12; i++) {
+        btn[i].classList.add("animate__animated", "animate__fadeInLeft");
     }
 }

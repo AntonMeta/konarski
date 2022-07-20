@@ -244,8 +244,8 @@ body {
     border: none;
     padding: 0;
     background: none;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .overlay-sidebar ol li button span {
@@ -256,6 +256,7 @@ body {
     color: #fff;
     position: relative;
     font-family: 'Noto Serif', serif;
+    transition: all 0.3s ease;
 }
 
 .overlay-sidebar ol li button span.noactive {
@@ -306,6 +307,10 @@ body {
     --animate-duration: 0.7s;
 }
 
+.anim2 {
+    --animate-duration: 0.4s;
+}
+
 .overlay-sidebar-children {
     position: fixed;
     top: 100px;
@@ -326,7 +331,7 @@ body {
 
     width: 100%;
 
-    padding: 0px 50px 0;
+    padding: 20px 75px 0;
     list-style: none;
     display: list-item;
     position: relative;
@@ -337,7 +342,6 @@ body {
     padding: 0;
     background: none;
     margin-top: 25px;
-    margin-bottom: 25px;
 }
 
 
