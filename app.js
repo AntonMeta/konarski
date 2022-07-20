@@ -20,7 +20,10 @@ var menu = document.getElementById("navBtn");
 function openNav() {
     if (menu.classList.contains('opened')) {
         document.getElementById("myNav").style.height = "100%";
-        document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "visible";
+        setTimeout(function () {
+            document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "visible";
+        }, 200);
+        setTimeout(slideIn(), 200)
     }
     else {
         document.getElementById("myNav").style.height = "0%";
@@ -32,6 +35,13 @@ function openNav() {
                 document.getElementById("child" + nigger).classList.toggle("active");
             }
         }
+
+        var btn = document.getElementsByClassName("anim");
+        for (var i = 0; i < 4; i++) {
+            btn[i].classList.remove("animate__animated", "animate__fadeInDown");
+        }
+
+
     }
 }
 
@@ -107,6 +117,6 @@ function showChild(a, n) {
 function slideIn() {
     var btn = document.getElementsByClassName("anim");
     for (var i = 0; i < 4; i++) {
-        btn[i].classList.add("animate__animated","animate__fadeInDown");
+        btn[i].classList.add("animate__animated", "animate__fadeInDown");
     }
 }

@@ -15,7 +15,7 @@
             <h1>Liceum Ogólnokształcące im. ks. Stanisława Konarskiego</h1>
         </div>
         <button id="navBtn" class="menu"
-            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'));openNav();slideIn()"
+            onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'));openNav()"
             aria-label="Main Menu">
             <svg width="100" height="100" viewBox="0 0 100 100">
                 <path class="line line1"
@@ -31,26 +31,22 @@
                 <ol>
                     <li>
                         <button class="anim">
-                            <span class="span_first"
-                                onclick="showChild(this, 1)">link1</span>
+                            <span class="span_first" onclick="showChild(this, 1)">link1</span>
                         </button>
                     </li>
                     <li>
                         <button class="anim">
-                            <span class="span_first"
-                                onclick="showChild(this, 1)">link2</span>
+                            <span class="span_first" onclick="showChild(this, 1)">link2</span>
                         </button>
                     </li>
                     <li>
                         <button class="anim">
-                            <span class="span_first"
-                                onclick="showChild(this, 1)">link3</span>
+                            <span class="span_first" onclick="showChild(this, 1)">link3</span>
                         </button>
                     </li>
                     <li>
                         <button class="anim">
-                            <span class="span_first"
-                                onclick="showChild(this, 4)">link4</span>
+                            <span class="span_first" onclick="showChild(this, 4)">link4</span>
                         </button>
                     </li>
                     <li>
@@ -164,7 +160,7 @@
     <br>
     <br>
 
-    
+
     <h1 class="animate__animated animate__fadeInDown">An animated element</h1>
 
     <button onclick="topFunction()" class="ScrollUpBtn" title="Go to top">&#8593</button>
