@@ -260,10 +260,12 @@ body {
 
 .overlay-sidebar ol li button span.noactive {
     color: #505050;
+    transition: all 0.3s ease;
 }
 
 .overlay-sidebar ol li button span.noactive:hover {
     color: #fff;
+    transition: all 0.3s ease;
 }
 
 .overlay-sidebar ol li button span.noactive::after {
@@ -343,6 +345,9 @@ body {
     color: #fff;
     position: relative;
 }
+
 .overlay-sidebar-children ol li button span::after {}
 
 .overlay-sidebar-children ol li button span:hover:after {}
+@keyframes
+nothing brakes like a heart
