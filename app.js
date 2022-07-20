@@ -17,6 +17,7 @@ function topFunction() {
 }
 
 var menu = document.getElementById("navBtn");
+
 function openNav() {
     if (menu.classList.contains('opened')) {
         document.getElementById("myNav").style.height = "100%";
@@ -41,7 +42,10 @@ function openNav() {
             btn[i].classList.remove("animate__animated", "animate__fadeInDown");
         }
 
-
+        var btn = document.getElementsByClassName("anim2");
+        for (var i = 0; i < 5; i++) {
+            btn[i].classList.remove("animate__animated", "animate__fadeInLeft");
+        }
     }
 }
 
@@ -62,7 +66,20 @@ window.initMap = initMap;
 
 // FUNKCJA NARAZIE DZIALA, ALE PRZYDALOBY SIE KIEDYS PRZEPISAC NA COS BARDZIEJ CZYTELNEGO, LEPIEJ ZROBIONEGO :)
 
+function slideInLeft() {
+    var btn = document.getElementsByClassName("anim2");
+    for (var i = 0; i < 13; i++) {
+        btn[i].classList.add("animate__animated", "animate__fadeInLeft");
+    }
+}
 function showChild(a, n) {
+    var btn = document.getElementsByClassName("anim2");
+    for (var i = 0; i < btn.length; i++) {
+        if (btn[i].classList.contains("animate__animated")){
+            btn[i].classList.remove("animate__animated");
+            btn[i].classList.remove("animate__fadeInLeft");
+        }
+    }
     if (a.classList.contains("active")) {
         var spans = document.getElementsByClassName("span_first");
         for (var i = 0; i < 6; i++) {
@@ -73,7 +90,7 @@ function showChild(a, n) {
                 spans[i].classList.toggle("active");
             }
         }
-        for (var j = 1; j <= 1; j++) {
+        for (var j = 1; j <= 2; j++) {
             if (document.getElementById("child" + '' + j).classList.contains("active")) {
                 document.getElementById("child" + '' + j).classList.toggle("active");
             }
@@ -101,7 +118,7 @@ function showChild(a, n) {
         }
 
         ////////////////////////////////
-        for (var j = 1; j <= 1; j++) {
+        for (var j = 1; j <= 2; j++) {
             if (document.getElementById("child" + '' + j).classList.contains("active")) {
                 if (j != n) {
                     document.getElementById("child" + '' + j).classList.toggle("active");
@@ -112,21 +129,12 @@ function showChild(a, n) {
         a.classList.toggle("noactive");
         a.classList.toggle("active");
         document.getElementById("child" + '' + n).classList.toggle("active");
+        slideInLeft();
     }
 }
 function slideIn() {
     var btn = document.getElementsByClassName("anim");
     for (var i = 0; i < 6; i++) {
         btn[i].classList.add("animate__animated", "animate__fadeInDown");
-    }
-}
-function slideInLeft() {
-    var btn = document.getElementsByClassName("anim2");
-    for (var i = 0; i < 12; i++) {
-        btn[i].classList.remove("animate__animated", "animate__fadeInLeft");
-    }
-
-    for (var i = 0; i < 12; i++) {
-        btn[i].classList.add("animate__animated", "animate__fadeInLeft");
     }
 }
