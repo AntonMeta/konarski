@@ -342,6 +342,8 @@ body {
     padding: 0;
     background: none;
     margin-top: 25px;
+    margin-bottom: 10px;
+    text-align: left;
 }
 
 
@@ -352,6 +354,7 @@ body {
     font-size: 40px;
     color: #fff;
     position: relative;
+
 }
 
 .overlay-sidebar-children ol li button span::after {}
