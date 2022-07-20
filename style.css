@@ -248,7 +248,6 @@ body {
     margin-bottom: 25px;
 }
 
-
 .overlay-sidebar ol li button span {
     text-decoration: none;
     background-position: 0 100%;
@@ -261,6 +260,14 @@ body {
 
 .overlay-sidebar ol li button span.noactive {
     color: #505050;
+}
+
+.overlay-sidebar ol li button span.noactive:hover {
+    color: #fff;
+}
+
+.overlay-sidebar ol li button span.noactive::after {
+    height: 0;
 }
 
 .overlay-sidebar ol li button span::after {
@@ -281,17 +288,17 @@ body {
     transform-origin: bottom left;
 }
 
-.sidebar-active:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(1);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #fff;
-    transform-origin: bottom left;
-}
+/* .sidebar-active:after { */
+/*     content: ''; */
+/*     position: absolute; */
+/*     width: 100%; */
+/*     transform: scaleX(1); */
+/*     height: 1px; */
+/*     bottom: 0; */
+/*     left: 0; */
+/*     background-color: #fff; */
+/*     transform-origin: bottom left; */
+/* } */
 
 .overlay-sidebar-children {
     position: fixed;

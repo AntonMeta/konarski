@@ -54,7 +54,6 @@ window.initMap = initMap;
 
 function showChild(a, n) {
     if (a.classList.contains("active")){
-
         var spans = document.getElementsByClassName("span_first");
         for (var i = 0; i < 4; i++) {
             if(spans[i].classList.contains("noactive")) {
@@ -64,41 +63,44 @@ function showChild(a, n) {
                 spans[i].classList.toggle("active");
             }
         } 
+	    for (var j = 1; j <= 1; j++) {
+	        if(document.getElementById("child"+''+j).classList.contains("active")) {
+	            document.getElementById("child"+''+j).classList.toggle("active");
+	        }
+	    }
     }else {
-
-
-    var spans = document.getElementsByClassName("span_first");
-    for (var i = 0; i < 4; i++) {
-        if(spans[i].classList.contains("noactive")) {
-            spans[i].classList.toggle("noactive");
-        }
-    } 
-
-    for (var i = 0; i < 4; i++) {
-       if(spans[i].classList.contains("active")) {
-            if (a != spans[i]) {
-                spans[i].classList.toggle("active");
-            }
-            break;
-       }
-    }
-
-        ///////////////////////////////////
-        for (var i = 0; i < 4; i++) {
-            spans[i].classList.toggle("noactive");
-        }
-       
-    ////////////////////////////////
-    for (var j = 1; j <= 1; j++) {
-       if(document.getElementById("child"+''+j).classList.contains("active")) {
-            if(j != n) {
-                document.getElementById("child"+''+j).classList.toggle("active");
-            }
-            break;
-       }
-    }
-    a.classList.toggle("noactive");
-    a.classList.toggle("active");
-    document.getElementById("child"+''+n).classList.toggle("active");
+	    var spans = document.getElementsByClassName("span_first");
+	    for (var i = 0; i < 4; i++) {
+	        if(spans[i].classList.contains("noactive")) {
+	            spans[i].classList.toggle("noactive");
+	        }
+	    } 
+	
+	    for (var i = 0; i < 4; i++) {
+	       if(spans[i].classList.contains("active")) {
+	            if (a != spans[i]) {
+	                spans[i].classList.toggle("active");
+	            }
+	            break;
+	       }
+	    }
+	
+	        ///////////////////////////////////
+	    for (var i = 0; i < 4; i++) {
+	    	spans[i].classList.toggle("noactive");
+	    }
+	       
+	    ////////////////////////////////
+	    for (var j = 1; j <= 1; j++) {
+	       if(document.getElementById("child"+''+j).classList.contains("active")) {
+	            if(j != n) {
+	                document.getElementById("child"+''+j).classList.toggle("active");
+	            }
+	            break;
+	       }
+	    }
+	    a.classList.toggle("noactive");
+	    a.classList.toggle("active");
+	    document.getElementById("child"+''+n).classList.toggle("active");
     }
 }
