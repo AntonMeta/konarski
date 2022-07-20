@@ -105,5 +105,8 @@ function showChild(a, n) {
     }
 }
 function slideIn() {
-    
+    var btn = document.getElementsByClassName("anim");
+    for (var i = 0; i < 4; i++) {
+        btn[i].classList.add("animate__animated","animate__fadeInDown");
+    }
 }

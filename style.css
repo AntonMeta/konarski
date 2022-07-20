@@ -302,6 +302,10 @@ body {
 /*     transform-origin: bottom left; */
 /* } */
 
+.anim {
+  --animate-duration: 0.7s;
+}
+
 .overlay-sidebar-children {
     position: fixed;
     top: 100px;
@@ -349,5 +353,5 @@ body {
 .overlay-sidebar-children ol li button span::after {}
 
 .overlay-sidebar-children ol li button span:hover:after {}
-@keyframes
-nothing brakes like a heart
+/* @keyframes */
+/* nothing brakes like a heart */
