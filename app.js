@@ -38,12 +38,12 @@ function openNav() {
         }
 
         var btn = document.getElementsByClassName("anim");
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 6; i++) {
             btn[i].classList.remove("animate__animated", "animate__fadeInDown");
         }
 
         var btn = document.getElementsByClassName("anim2");
-        for (var i = 0; i < 5; i++) {
+        for (var i = 0; i < 6; i++) {
             btn[i].classList.remove("animate__animated", "animate__fadeInLeft");
         }
     }
@@ -75,7 +75,7 @@ function slideInLeft() {
 function showChild(a, n) {
     var btn = document.getElementsByClassName("anim2");
     for (var i = 0; i < btn.length; i++) {
-        if (btn[i].classList.contains("animate__animated")){
+        if (btn[i].classList.contains("animate__animated")) {
             btn[i].classList.remove("animate__animated");
             btn[i].classList.remove("animate__fadeInLeft");
         }
