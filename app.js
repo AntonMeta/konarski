@@ -25,6 +25,13 @@ function openNav() {
     else {
         document.getElementById("myNav").style.height = "0%";
         document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "hidden";
+
+        for(var i = 1; i <= 1; i++){
+            var nigger = i + '';
+            if (document.getElementById("child"+nigger).classList.contains("active")) {
+                document.getElementById("child"+nigger).classList.toggle("active");
+            }
+        }
     }
 }
 
@@ -43,8 +50,55 @@ function initMap() {
 
 window.initMap = initMap;
 
+// FUNKCJA NARAZIE DZIALA, ALE PRZYDALOBY SIE KIEDYS PRZEPISAC NA COS BARDZIEJ CZYTELNEGO, LEPIEJ ZROBIONEGO :)
+
 function showChild(a, n) {
+    if (a.classList.contains("active")){
+
+        var spans = document.getElementsByClassName("span_first");
+        for (var i = 0; i < 4; i++) {
+            if(spans[i].classList.contains("noactive")) {
+                spans[i].classList.toggle("noactive");
+            }
+            if(spans[i].classList.contains("active")){
+                spans[i].classList.toggle("active");
+            }
+        } 
+    }else {
+
+
+    var spans = document.getElementsByClassName("span_first");
+    for (var i = 0; i < 4; i++) {
+        if(spans[i].classList.contains("noactive")) {
+            spans[i].classList.toggle("noactive");
+        }
+    } 
+
+    for (var i = 0; i < 4; i++) {
+       if(spans[i].classList.contains("active")) {
+            if (a != spans[i]) {
+                spans[i].classList.toggle("active");
+            }
+            break;
+       }
+    }
+
+        ///////////////////////////////////
+        for (var i = 0; i < 4; i++) {
+            spans[i].classList.toggle("noactive");
+        }
+       
+    ////////////////////////////////
+    for (var j = 1; j <= 1; j++) {
+       if(document.getElementById("child"+''+j).classList.contains("active")) {
+            if(j != n) {
+                document.getElementById("child"+''+j).classList.toggle("active");
+            }
+            break;
+       }
+    }
+    a.classList.toggle("noactive");
     a.classList.toggle("active");
-    var nigger = n + '';
-    document.getElementById("child" + nigger).classList.toggle("active");
+    document.getElementById("child"+''+n).classList.toggle("active");
+    }
 }

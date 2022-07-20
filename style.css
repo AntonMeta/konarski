@@ -259,7 +259,9 @@ body {
     font-family: 'Noto Serif', serif;
 }
 
-
+.overlay-sidebar ol li button span.noactive {
+    color: #505050;
+}
 
 .overlay-sidebar ol li button span::after {
     content: '';
@@ -334,9 +336,6 @@ body {
     color: #fff;
     position: relative;
 }
-
-
-
 .overlay-sidebar-children ol li button span::after {}
 
 .overlay-sidebar-children ol li button span:hover:after {}
