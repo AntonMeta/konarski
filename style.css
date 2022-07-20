@@ -73,13 +73,13 @@ body {
     background-color: #1e1e1e;
     font-size: 24px;
     width: 100%;
-    color: #00482d;
+    color: #f3f3f3;
     text-align: right;
     padding: 25px;
     padding-top: 22.5px;
     padding-bottom: 22.5px;
     height: 100px;
-    -webkit-text-stroke: 1px #fff;
+
 }
 
 .menu {
@@ -254,9 +254,7 @@ body {
     padding-bottom: 10%;
 }
 
-.news .news-1-line {
-    display: inline-block;
-}
+.news .news-1-line {}
 
 .news h1 {
     color: #00482d;
@@ -268,10 +266,15 @@ body {
 
 .news .news-1-line a {
 
-    width: 28%;
+    width: 30%;
     height: 450px;
     background-color: red;
-    display: block;
+    display: inline-block;
+    margin-right: 4.5%;
+}
+
+.news .news-1-line a:last-child {
+    margin-right: 0;
 }
 
 .overlay {
