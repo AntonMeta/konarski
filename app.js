@@ -30,21 +30,21 @@ function openNav() {
         document.getElementById("myNav").style.height = "0%";
         document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "hidden";
 
+        for (var i = 1; i <= 2; i++) {
+            if (document.getElementById("child"+''+i).classList.contains("active")) {
+                document.getElementById("child"+''+i).classList.toggle("active");
+            }
+        }
+
         for (var i = 1; i <= 1; i++) {
-            var nigger = i + '';
-            if (document.getElementById("child" + nigger).classList.contains("active")) {
-                document.getElementById("child" + nigger).classList.toggle("active");
+            if (document.getElementById("grandchild"+''+i).classList.contains("active")) {
+                document.getElementById("grandchild"+''+i).classList.toggle("active");
             }
         }
 
         var btn = document.getElementsByClassName("anim");
         for (var i = 0; i < 6; i++) {
             btn[i].classList.remove("animate__animated", "animate__fadeInDown");
-        }
-
-        var btn = document.getElementsByClassName("anim2");
-        for (var i = 0; i < 6; i++) {
-            btn[i].classList.remove("animate__animated", "animate__fadeInLeft");
         }
     }
 }
@@ -64,134 +64,62 @@ function initMap() {
 
 window.initMap = initMap;
 
-// FUNKCJA NARAZIE DZIALA, ALE PRZYDALOBY SIE KIEDYS PRZEPISAC NA COS BARDZIEJ CZYTELNEGO, LEPIEJ ZROBIONEGO :)
+// NARPAWIC ANIMACJE
 
-function slideInLeft() {
-    var btn = document.getElementsByClassName("anim2");
-    for (var i = 0; i < 13; i++) {
-        btn[i].classList.add("animate__animated", "animate__fadeInLeft");
+function clearAnim(class_name) {
+    if (class_name != "none") {
+        var anim_element = document.getElementsByClassName(class_name);
+        for(var i = 0; i < anim_element.length; i++){
+            anim_element[i].classList.toggle("animate__animated");
+            anim_element[i].classList.toggle("animate__fadeInLeft");
+        }
     }
 }
-function showChild(a, n) {
-    var btn = document.getElementsByClassName("anim2");
-    for (var i = 0; i < btn.length; i++) {
-        if (btn[i].classList.contains("animate__animated")) {
-            btn[i].classList.remove("animate__animated");
-            btn[i].classList.remove("animate__fadeInLeft");
-        }
-    }
-    if (a.classList.contains("active")) {
-        var spans = document.getElementsByClassName("span_first");
-        for (var i = 0; i < 6; i++) {
-            if (spans[i].classList.contains("noactive")) {
-                spans[i].classList.toggle("noactive");
-            }
-            if (spans[i].classList.contains("active")) {
-                spans[i].classList.toggle("active");
-            }
-        }
-        for (var j = 1; j <= 2; j++) {
-            if (document.getElementById("child" + '' + j).classList.contains("active")) {
-                document.getElementById("child" + '' + j).classList.toggle("active");
-            }
-        }
-    } else {
-        var spans = document.getElementsByClassName("span_first");
-        for (var i = 0; i < 6; i++) {
-            if (spans[i].classList.contains("noactive")) {
-                spans[i].classList.toggle("noactive");
-            }
-        }
 
-        for (var i = 0; i < 6; i++) {
-            if (spans[i].classList.contains("active")) {
-                if (a != spans[i]) {
-                    spans[i].classList.toggle("active");
-                }
-                break;
-            }
+function setAnim(class_name) {
+    if (class_name != "none") {
+        var anim_element = document.getElementsByClassName(class_name);
+        for(var i = 0; i < anim_element.length; i++){
+            anim_element[i].classList.toggle("animate__animated");
+            anim_element[i].classList.toggle("animate__fadeInLeft");
         }
-
-        ///////////////////////////////////
-        for (var i = 0; i < 6; i++) {
-            spans[i].classList.toggle("noactive");
-        }
-
-        ////////////////////////////////
-        for (var j = 1; j <= 2; j++) {
-            if (document.getElementById("child" + '' + j).classList.contains("active")) {
-                if (j != n) {
-                    document.getElementById("child" + '' + j).classList.toggle("active");
-                }
-                break;
-            }
-        }
-        a.classList.toggle("noactive");
-        a.classList.toggle("active");
-        document.getElementById("child" + '' + n).classList.toggle("active");
-        slideInLeft();
     }
 }
-function showGrandChild(n) {
-    var btn = document.getElementsByClassName("anim2");
-    for (var i = 0; i < btn.length; i++) {
-        if (btn[i].classList.contains("animate__animated")) {
-            btn[i].classList.remove("animate__animated");
-            btn[i].classList.remove("animate__fadeInLeft");
+
+function setActive(class_name, index) {
+    if (class_name != "none") {
+        var active_element = document.getElementsByClassName(class_name);
+        for(var i = 0; i < active_element.length; i++) {
+            active_element[i].classList.toggle("noactive");
         }
+        active_element[index-1].classList.toggle("noactive"); 
+        active_element[index-1].classList.toggle("active"); 
     }
-    // if (a.classList.contains("active")) {
-    //     // var spans = document.getElementsByClassName("span_first");
-        // for (var i = 0; i < 6; i++) {
-        //     if (spans[i].classList.contains("noactive")) {
-        //         spans[i].classList.toggle("noactive");
-        //     }
-        //     if (spans[i].classList.contains("active")) {
-        //         spans[i].classList.toggle("active");
-        //     }
-        // }
-        // for (var j = 1; j <= 2; j++) {
-        //     if (document.getElementById("grandchild" + '' + j).classList.contains("active")) {
-        //         document.getElementById("grandchild" + '' + j).classList.toggle("active");
-        //     }
-        // }
-    // } else {
-        // var spans = document.getElementsByClassName("span_first");
-        // for (var i = 0; i < 6; i++) {
-        //     if (spans[i].classList.contains("noactive")) {
-        //         spans[i].classList.toggle("noactive");
-        //     }
-        // }
-
-        // for (var i = 0; i < 6; i++) {
-        //     if (spans[i].classList.contains("active")) {
-        //         if (a != spans[i]) {
-        //             spans[i].classList.toggle("active");
-        //         }
-        //         break;
-        //     }
-        // }
-
-        ///////////////////////////////////
-        // for (var i = 0; i < 6; i++) {
-        //     spans[i].classList.toggle("noactive");
-        // }
-
-        ////////////////////////////////
-        for (var j = 1; j <= 2; j++) {
-            if (document.getElementById("child" + '' + j).classList.contains("active")) {
-                if (j != n) {
-                    document.getElementById("child" + '' + j).classList.toggle("active");
-                }
-                break;
-            }
-        }
-        // a.classList.toggle("noactive");
-        // a.classList.toggle("active");
-        document.getElementById("grandchild" + '' + n).classList.toggle("active");
-        slideInLeft();
-    // }
 }
+
+function showChilds(child_type, index, class_active_name, class_anim_name) {
+     // deleting old children from screen
+     var over1ay_sidebar_children = document.getElementsByClassName("overlay-sidebar-"+child_type+"ren");    
+     for (var i = 0; i < over1ay_sidebar_children.length; i++ ){
+        if(over1ay_sidebar_children[i].classList.contains("active")){
+            // checking if not same
+            if (i != index-1) {
+                setActive(class_active_name, i+1);
+                over1ay_sidebar_children[i].classList.toggle("active");
+            }
+            break;
+        }
+     }
+
+     // showing children if different, deleting if same
+     document.getElementById(child_type+''+index).classList.toggle("active");
+
+     // making element active
+     clearAnim(class_anim_name);
+     setActive(class_active_name, index);
+     setAnim(class_anim_name);
+}
+
 function slideIn() {
     var btn = document.getElementsByClassName("anim");
     for (var i = 0; i < 6; i++) {
