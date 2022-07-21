@@ -132,6 +132,66 @@ function showChild(a, n) {
         slideInLeft();
     }
 }
+function showGrandChild(n) {
+    var btn = document.getElementsByClassName("anim2");
+    for (var i = 0; i < btn.length; i++) {
+        if (btn[i].classList.contains("animate__animated")) {
+            btn[i].classList.remove("animate__animated");
+            btn[i].classList.remove("animate__fadeInLeft");
+        }
+    }
+    // if (a.classList.contains("active")) {
+    //     // var spans = document.getElementsByClassName("span_first");
+        // for (var i = 0; i < 6; i++) {
+        //     if (spans[i].classList.contains("noactive")) {
+        //         spans[i].classList.toggle("noactive");
+        //     }
+        //     if (spans[i].classList.contains("active")) {
+        //         spans[i].classList.toggle("active");
+        //     }
+        // }
+        // for (var j = 1; j <= 2; j++) {
+        //     if (document.getElementById("grandchild" + '' + j).classList.contains("active")) {
+        //         document.getElementById("grandchild" + '' + j).classList.toggle("active");
+        //     }
+        // }
+    // } else {
+        // var spans = document.getElementsByClassName("span_first");
+        // for (var i = 0; i < 6; i++) {
+        //     if (spans[i].classList.contains("noactive")) {
+        //         spans[i].classList.toggle("noactive");
+        //     }
+        // }
+
+        // for (var i = 0; i < 6; i++) {
+        //     if (spans[i].classList.contains("active")) {
+        //         if (a != spans[i]) {
+        //             spans[i].classList.toggle("active");
+        //         }
+        //         break;
+        //     }
+        // }
+
+        ///////////////////////////////////
+        // for (var i = 0; i < 6; i++) {
+        //     spans[i].classList.toggle("noactive");
+        // }
+
+        ////////////////////////////////
+        for (var j = 1; j <= 2; j++) {
+            if (document.getElementById("child" + '' + j).classList.contains("active")) {
+                if (j != n) {
+                    document.getElementById("child" + '' + j).classList.toggle("active");
+                }
+                break;
+            }
+        }
+        // a.classList.toggle("noactive");
+        // a.classList.toggle("active");
+        document.getElementById("grandchild" + '' + n).classList.toggle("active");
+        slideInLeft();
+    // }
+}
 function slideIn() {
     var btn = document.getElementsByClassName("anim");
     for (var i = 0; i < 6; i++) {
