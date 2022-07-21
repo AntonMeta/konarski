@@ -314,7 +314,10 @@ body {
     padding-bottom: 10%;
 }
 
-.news .news-1-line {}
+.news .news-1-line {
+    width: 100%;
+    display: inline-flex;
+}
 
 .news h1 {
     color: #00482d;
@@ -325,8 +328,6 @@ body {
 }
 
 .news .news-1-line a {
-
-    display: inline-block;
     width: 30%;
     height: 450px;
     background-color: #e5e5e5;
