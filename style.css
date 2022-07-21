@@ -500,7 +500,7 @@ body {
 
 #virgin span span {
     font-size: 30px;
-    transform: translate(-7px, 6px);
+    transform: translate(-5px, 6px);
     color: #1e1e1e;
     transition: all 0.2s ease-in-out;
 }
