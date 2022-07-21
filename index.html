@@ -35,32 +35,32 @@
                 <ol>
                     <li>
                         <button class="anim">
-                            <span class="span_first" onclick="showChild(this, 1)">Informacje</span>
+                            <span class="span_first" onclick="showChilds('child', 1, 'span_first', 'anim2')">Informacje</span>
                         </button>
                     </li>
                     <li>
                         <button class="anim">
-                            <span class="span_first" onclick="showChild(this, 2)">link2</span>
+                            <span class="span_first" onclick="showChilds('child', 2, 'span_first', 'anim2')">link2</span>
                         </button>
                     </li>
                     <li>
                         <button class="anim">
-                            <span class="span_first" onclick="showChild(this, 3)">link3</span>
+                            <span class="span_first" onclick="showChilds('child', 3)">link3</span>
                         </button>
                     </li>
                     <li>
                         <button class="anim">
-                            <span class="span_first" onclick="showChild(this, 4)">link4</span>
+                            <span class="span_first" onclick="showChilds('child', 4)">link4</span>
                         </button>
                     </li>
                     <li>
                         <button class="anim">
-                            <span class="span_first" onclick="showChild(this, 5)">link5</span>
+                            <span class="span_first" onclick="showChilds('child', 5)">link5</span>
                         </button>
                     </li>
                     <li>
                         <button class="anim">
-                            <span class="span_first" onclick="showChild(this, 6)">link6</span>
+                            <span class="span_first" onclick="showChilds('child', 6)">link6</span>
                         </button>
                     </li>
                 </ol>
@@ -73,18 +73,18 @@
                         </button>
                     </li>
                     <li>
-                        <button id="mother" onclick="showGrandChild(1)" class="anim2">
-                            <span>Rekrutacja<br>2022<span class="material-symbols-outlined">chevron_right</span></span>
+                        <button id="mother" onclick="showChilds('grandchild', 1, 'mother', 'none')" class="anim2">
+                            <span>Rekrutacja<br>2022<span class="mother material-symbols-outlined">chevron_right</span></span>
                         </button>
                     </li>
                     <li>
-                        <button id="mother" onclick="showGrandChild(2)" class="anim2">
-                            <span>Matura 2022<span class="material-symbols-outlined">chevron_right</span></span>
+                        <button id="mother" onclick="showChilds('grandchild', 2, 'mother', 'none')" class="anim2">
+                            <span>Matura 2022<span class="mother material-symbols-outlined">chevron_right</span></span>
                         </button>
                     </li>
                     <li>
                         <button id="mother" onclick="showGrandChild(3)" class="anim2">
-                            <span>Matura 2023<span class="material-symbols-outlined">chevron_right</span>
+                            <span>Matura 2023<span class="mother material-symbols-outlined">chevron_right</span>
                             </span>
                         </button>
                     </li>

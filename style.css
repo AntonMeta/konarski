@@ -649,7 +649,7 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-#mother:hover span span, #mother.active {
+#mother:hover span span, #mother span span.active {
     color: #f3f3f3;
     transition: all 0.2s ease-in-out;
 }
