@@ -6,7 +6,9 @@
     <meta charset="UTF-8">
     <link href="style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin,latin-ext' rel='stylesheet'
+        type='text/css'>
 </head>
 
 <body>
@@ -147,8 +149,15 @@
         <div class="text">
             <h1>Jakość i Tradycja Pokoleń</h1>
         </div>
+        <input type="button" onClick="document.getElementById('about').scrollIntoView();"/>
+        <div class="arrow">
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
     </div>
-    <div class="about">
+    <div id="about" class="about">
         <h1>O szkole</h1>
 
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac diam tellus. Donec quis tristique libero,

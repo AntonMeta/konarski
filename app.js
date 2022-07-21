@@ -138,3 +138,6 @@ function slideIn() {
         btn[i].classList.add("animate__animated", "animate__fadeInDown");
     }
 }
+function scrollDown() {
+    document.body.scrollTo(1000, 1000);
+}
