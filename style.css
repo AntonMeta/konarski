@@ -98,7 +98,7 @@ body {
 
 .line {
     fill: none;
-    stroke: #fff;
+    stroke: #f3f3f3;
     stroke-width: 6;
     transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
         stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -350,7 +350,7 @@ body {
     width: 100%;
     position: fixed;
     background: #1e1e1e;
-    color: #fff;
+    color: #f3f3f3;
     text-shadow: none;
     left: 0;
     top: 0;
@@ -394,7 +394,7 @@ body {
     background-position: 0 100%;
     background-size: 0 1px;
     font-size: 56px;
-    color: #fff;
+    color: #f3f3f3;
     position: relative;
     font-family: 'Noto Serif', serif;
     transition: all 0.3s ease;
@@ -406,7 +406,7 @@ body {
 }
 
 .overlay-sidebar ol li button span.noactive:hover {
-    color: #fff;
+    color: #f3f3f3;
     transition: all 0.3s ease;
 }
 
@@ -422,7 +422,7 @@ body {
     height: 1px;
     bottom: 0;
     left: 0;
-    background-color: #fff;
+    background-color: #f3f3f3;
     transform-origin: bottom left;
     transition: transform 0.2s ease-out;
 }
@@ -492,15 +492,97 @@ body {
     text-decoration: none;
     background-position: 0 100%;
     background-size: 0 1px;
-    font-size: 40px;
-    color: #fff;
+    font-size: 27px;
+    color: #f3f3f3;
     position: relative;
-
+    font-weight: bolder;
 }
+
+#virgin span span {
+    font-size: 30px;
+    transform: translate(-7px, 6px);
+    color: #1e1e1e;
+    transition: all 0.2s ease-in-out;
+}
+
+#virgin:hover span span {
+    transform: translate(7px, 6px);
+    color: #f3f3f3;
+    transition: all 0.2s ease-in-out;
+}
+
+#mother span span {
+    font-size: 40px;
+    transform: translateY(8px);
+    color: #505050;
+    transition: all 0.2s ease-in-out;
+}
+
+#mother:hover span span {
+    color: #f3f3f3;
+    transition: all 0.2s ease-in-out;
+}
+
 
 .overlay-sidebar-children ol li button span::after {}
 
 .overlay-sidebar-children ol li button span:hover:after {}
+
+.overlay-sidebar-grandchildren {
+    position: fixed;
+    top: 100px;
+    visibility: visible;
+    height: 100%;
+    overflow-y: auto;
+    width: 50%;
+    left: 50%;
+    display: block;
+    z-index: 5;
+}
+
+.overlay-sidebar-grandchildren.active {
+    visibility: visible;
+}
+
+.overlay-sidebar-grandchildren ol {
+
+    width: 100%;
+    margin-top: 50px;
+    padding: 20px 75px 0;
+    list-style: none;
+    display: list-item;
+    position: relative;
+}
+
+.overlay-sidebar-grandchildren ol li {
+
+    border-bottom: 1px solid #505050;
+}
+
+.overlay-sidebar-grandchildren ol li:first-child {
+    border-top: 1px solid #505050;
+}
+
+.overlay-sidebar-grandchildren ol li button {
+    border: none;
+    background: none;
+    text-align: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+
+
+.overlay-sidebar-grandchildren ol li button span {
+    text-decoration: none;
+    background-position: 0 100%;
+    background-size: 0 1px;
+    font-size: 20px;
+    color: #f3f3f3;
+    position: relative;
+    font-weight: bold;
+}
 
 /* @keyframes */
 /* nothing brakes like a heart */
