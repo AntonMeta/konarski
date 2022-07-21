@@ -326,20 +326,41 @@ body {
 
 .news .news-1-line a {
 
+    display: inline-block;
     width: 30%;
     height: 450px;
     background-color: #e5e5e5;
-    display: inline-block;
     margin-right: 4.5%;
     border: #00482d solid 15px;
     border-radius: 1%;
     transition: all 0.3s ease-out;
 }
 
+.news .news-1-line a img {
+    height: 35%;
+    width: auto;
+    display: block;
+    margin: 5% auto 5% auto;
+    transition: all 0.3s ease-out;
+}
+
+.news .news-1-line a h1 {
+    color: #1e1e1e;
+    font-size: 30px;
+    overflow: hidden;
+    margin-left: 5%;
+}
+
 .news .news-1-line a:hover {
     border: #00482d solid 1px;
     background-color: #fff;
     transition: all 0.3s ease-out;
+}
+
+.news .news-1-line a:hover img {
+    height: 40%;
+    margin: 2.5% auto 2.5% auto;
+    transition: all 0.5s ease-out;
 }
 
 .news .news-1-line a:last-child {
