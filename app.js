@@ -42,6 +42,15 @@ function openNav() {
             }
         }
 
+        var active_element = document.getElementsByClassName("span_first");
+        for(var i = 0; i < active_element.length; i++) {
+            if(active_element[i].classList.contains("active")) {
+                active_element[i].classList.toggle("active");
+            }else{
+                active_element[i].classList.toggle("noactive");
+            }
+        }
+
         var btn = document.getElementsByClassName("anim");
         for (var i = 0; i < 6; i++) {
             btn[i].classList.remove("animate__animated", "animate__fadeInDown");
@@ -63,28 +72,6 @@ function initMap() {
 }
 
 window.initMap = initMap;
-
-// NARPAWIC ANIMACJE
-
-function clearAnim(class_name) {
-    if (class_name != "none") {
-        var anim_element = document.getElementsByClassName(class_name);
-        for(var i = 0; i < anim_element.length; i++){
-            anim_element[i].classList.toggle("animate__animated");
-            anim_element[i].classList.toggle("animate__fadeInLeft");
-        }
-    }
-}
-
-function setAnim(class_name) {
-    if (class_name != "none") {
-        var anim_element = document.getElementsByClassName(class_name);
-        for(var i = 0; i < anim_element.length; i++){
-            anim_element[i].classList.toggle("animate__animated");
-            anim_element[i].classList.toggle("animate__fadeInLeft");
-        }
-    }
-}
 
 function setActive(class_name, index) {
     if (class_name != "none") {
@@ -111,13 +98,28 @@ function showChilds(child_type, index, class_active_name, class_anim_name) {
         }
      }
 
+    // deleting grandchildren if sidebar is off
+    if (child_type == "child") {
+        var over1ay_sidebar_grandchildren = document.getElementsByClassName("overlay-sidebar-grandchildren");    
+        for(var i = 0; i < over1ay_sidebar_grandchildren.length; i++) {
+            if(over1ay_sidebar_grandchildren[i].classList.contains("active")){
+                over1ay_sidebar_grandchildren[i].classList.toggle("active");
+            }
+        } 
+        var active = document.getElementsByClassName("mother");    
+        for(var i = 0; i < active.length; i++) {
+            if(active[i].classList.contains("active")){
+                active[i].classList.toggle("active");
+            }
+        } 
+    }
+
      // showing children if different, deleting if same
      document.getElementById(child_type+''+index).classList.toggle("active");
 
      // making element active
-     clearAnim(class_anim_name);
      setActive(class_active_name, index);
-     setAnim(class_anim_name);
+     animateCSS(class_anim_name, 'fadeInLeft');
 }
 
 function slideIn() {
@@ -129,3 +131,25 @@ function slideIn() {
 function scrollDown() {
     document.body.scrollTo(1000, 1000);
 }
+
+const animateCSS = (element, animation, prefix = 'animate__') =>
+  // We create a Promise and return it
+  new Promise((resolve, reject) => {
+    const animationName = `${prefix}${animation}`;
+    const node = document.getElementsByClassName(element);
+
+    for (var i = 0; i < node.length; i++){
+        node[i].classList.add(`${prefix}animated`, animationName);
+    }
+
+    // When the animation ends, we clean the classes and resolve the Promise
+    function handleAnimationEnd(event) {
+      event.stopPropagation();
+      for (var i = 0; i < node.length; i++){
+        node[i].classList.remove(`${prefix}animated`, animationName);
+      }
+      resolve('Animation ended');
+    }
+
+    node[0].addEventListener('animationend', handleAnimationEnd, {once: true});
+  });
