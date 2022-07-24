@@ -595,11 +595,6 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
-
-.overlay-sidebar-children ol li button span::after {}
-
-.overlay-sidebar-children ol li button span:hover:after {}
-
 .overlay-sidebar-grandchildren {
     position: fixed;
     top: 100px;
@@ -654,5 +649,20 @@ body {
     font-weight: bold;
 }
 
-/* @keyframes */
-/* nothing brakes like a heart */
+footer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.line {
+    flex: 1;
+    height: 2px;
+    background-color: #f3f3f3;
+}
+
+footer p {
+    padding: 0 2rem;
+    color: #f3f3f3;
+    font-weight: bolder;
+}
