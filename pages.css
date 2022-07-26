@@ -1,0 +1,20 @@
+.topic {
+    height: fit-content;
+}
+
+.topic h1 {
+    color: #f3f3f3;
+    font-family: 'Noto Serif', serif;
+    font-size: 72px;
+    margin: 25px;
+}
+
+.site-content {
+    height: fit-content;
+    background-color: #f3f3f3;
+}
+
+.site-content p {
+    color: #1e1e1e;
+    padding: 25px;
+}

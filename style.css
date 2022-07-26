@@ -438,14 +438,13 @@ body {
     visibility: hidden;
     height: 100%;
     overflow-y: auto;
-    width: 25%;
+    width: 30%;
     margin-right: 0;
 
 }
 
 .overlay-sidebar ol {
 
-    width: 25%;
 
     padding: 0px 50px 0;
     list-style: none;
@@ -457,8 +456,11 @@ body {
     border: none;
     padding: 0;
     background: none;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
 }
 
 .overlay-sidebar ol li button span {
@@ -477,7 +479,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.overlay-sidebar ol li button span.noactive:hover {
+.overlay-sidebar ol li button:hover span.noactive {
     color: #f3f3f3;
     transition: all 0.3s ease;
 }
@@ -528,10 +530,10 @@ body {
     position: fixed;
     top: 100px;
     visibility: hidden;
-    height: 100%;
+    height: calc(100% - 100px);
     overflow-y: auto;
-    width: 25%;
-    left: 25%;
+    width: 20%;
+    left: 30%;
     display: block;
     z-index: 5;
 }
@@ -544,7 +546,7 @@ body {
 
     width: 100%;
 
-    padding: 20px 75px 0;
+    padding: 20px 50px 0 50px;
     list-style: none;
     display: list-item;
     position: relative;
@@ -557,6 +559,7 @@ body {
     margin-top: 25px;
     margin-bottom: 10px;
     text-align: left;
+    cursor: pointer;
 }
 
 
@@ -572,13 +575,14 @@ body {
 
 #virgin span span {
     font-size: 30px;
-    transform: translate(-5px, 6px);
+    transform: translate(-5px, 2px);
     color: #1e1e1e;
     transition: all 0.2s ease-in-out;
+    position: fixed;
 }
 
 #virgin:hover span span {
-    transform: translate(7px, 6px);
+    transform: translate(7px, 2px);
     color: #f3f3f3;
     transition: all 0.2s ease-in-out;
 }
@@ -637,6 +641,7 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
+    cursor: pointer;
 }
 
 .overlay-sidebar-grandchildren ol li button span {
@@ -665,4 +670,17 @@ footer p {
     padding: 0 2rem;
     color: #f3f3f3;
     font-weight: bolder;
+}
+#virgin2 span span {
+    font-size: 30px;
+    transform: translate(-5px, -2px);
+    color: #1e1e1e;
+    transition: all 0.2s ease-in-out;
+    position: fixed;
+}
+
+#virgin2:hover span span {
+    transform: translate(7px, -2px);
+    color: #f3f3f3;
+    transition: all 0.2s ease-in-out;
 }
