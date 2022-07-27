@@ -7,14 +7,10 @@
     font-family: 'Noto Serif', serif;
     font-size: 72px;
     margin: 25px;
+    margin-left: 72px;
 }
 
 .site-content {
     height: fit-content;
     background-color: #f3f3f3;
-}
-
-.site-content p {
-    color: #1e1e1e;
-    padding: 25px;
 }

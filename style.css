@@ -657,6 +657,7 @@ body {
 footer {
     display: flex;
     align-items: center;
+    margin-top: 50px;
     margin-bottom: 50px;
 }
 
@@ -671,6 +672,7 @@ footer p {
     color: #f3f3f3;
     font-weight: bolder;
 }
+
 #virgin2 span span {
     font-size: 30px;
     transform: translate(-5px, -2px);
