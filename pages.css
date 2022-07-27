@@ -13,4 +13,49 @@
 .site-content {
     height: fit-content;
     background-color: #f3f3f3;
+    width: 100%;
+}
+
+.header {
+    display: inline-flex;
+    width: 100%;
+    height: 375px;
+}
+
+.header>h1 {
+    width: 50%;
+    text-align: center;
+    padding: 155px 72px;
+    font-family: 'Noto Serif', serif;
+    font-size: 56px;
+    display: block;
+    position: relative;
+}
+
+.photo {
+    width: 50%;
+    margin: 20px;
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.photo>img {
+    height: 335px;
+}
+
+.site-content>p {
+    padding: 72px;
+    width: 100%;
+    font-size: 25px;
+    display: block;
+}
+
+.vl {
+    border-left: 2px solid #1e1e1e;
+    position: relative;
+    height: 350px;
+    width: 0;
+    display: block;
+    margin-top: 15px;
 }
