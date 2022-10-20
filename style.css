@@ -13,6 +13,18 @@ html {
 
 body {
     font-family: "Poppins", sans-serif;
+    /* background-color: #00482d; */
+}
+
+
+.container {
+    opacity: 0;
+    background-color: #fff;
+    transition: opacity 1s, background-color 1s;
+}
+
+.container-loaded {
+    opacity: 1;
     background-color: #00482d;
 }
 
