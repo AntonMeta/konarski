@@ -263,6 +263,7 @@ nav {
     padding-right: 5%;
     padding-top: 5%;
     padding-bottom: 10%;
+
 }
 
 .about h1 {
@@ -459,7 +460,12 @@ nav {
     overflow-y: auto;
     width: 30%;
     margin-right: 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
+.overlay-sidebar::-webkit-scrollbar {
+    display: none;
 }
 
 .overlay-sidebar ol {
@@ -486,7 +492,7 @@ nav {
     text-decoration: none;
     background-position: 0 100%;
     background-size: 0 1px;
-    font-size: 56px;
+    font-size: 50px;
     color: #f3f3f3;
     position: relative;
     font-family: 'Noto Serif', serif;
@@ -550,11 +556,17 @@ nav {
     top: 100px;
     visibility: hidden;
     height: calc(100% - 100px);
-    overflow-y: auto;
-    width: 20%;
+    overflow: auto;
+    width: 25%;
     left: 30%;
     display: block;
     z-index: 5;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.overlay-sidebar-children::-webkit-scrollbar {
+    display: none;
 }
 
 .overlay-sidebar-children.active {
@@ -594,14 +606,14 @@ nav {
 
 #virgin span span {
     font-size: 30px;
-    transform: translate(-5px, 2px);
+    transform: translate(-5px, 6px);
     color: #1e1e1e;
     transition: all 0.2s ease-in-out;
-    position: fixed;
+    position: relative;
 }
 
 #virgin:hover span span {
-    transform: translate(7px, 2px);
+    transform: translate(7px, 6px);
     color: #f3f3f3;
     transition: all 0.2s ease-in-out;
 }
