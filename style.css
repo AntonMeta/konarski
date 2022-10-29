@@ -19,7 +19,7 @@ body {
 
 .container {
     opacity: 0;
-    background-color: #fff;
+    background-color: #505050;
     transition: opacity 1s, background-color 1s;
 }
 
@@ -160,9 +160,16 @@ nav {
     justify-content: center;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/tmp.jpg");
     background-size: cover;
+    opacity: 0;
+    transition: opacity 1s;
+    transition-delay: 0.5s;
 }
 
-.main-photo h1 {
+.main-photo-loaded {
+    opacity: 1;
+}
+
+.text {
     overflow: hidden;
     white-space: nowrap;
     margin: 20% 0;
@@ -174,6 +181,12 @@ nav {
     animation:
         typing 1.2s steps(25, end),
         cursor .8s step-end infinite;
+    transition: opacity 1s;
+
+}
+
+.text-loaded {
+    opacity: 1;
 }
 
 .main-photo input {

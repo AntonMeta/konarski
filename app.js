@@ -6,8 +6,10 @@ function mobi() {
     window.open("https://pz1oswiecim.mobidziennik.pl/dziennik/planlekcji?typ=podstawowy", "_blank")
 }
 
-document.body.onload = function() {
-    document.getElementsByClassName("container")[0].classList.add("container-loaded")
+document.body.onload = function () {
+    document.getElementsByClassName("container")[0].classList.add("container-loaded");
+    setTimeout(document.getElementsByClassName("main-photo")[0].classList.add("main-photo-loaded"), 500);
+    setTimeout(document.getElementsByClassName("text")[0].classList.add("text-loaded"), 5500);
 }
 
 function scrollFunction() {
