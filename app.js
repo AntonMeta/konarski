@@ -40,13 +40,13 @@ function openNav() {
         document.getElementById("myNav").style.height = "0%";
         document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "hidden";
 
-        for (var i = 1; i <= 2; i++) {
+        for (var i = 1; i <= 5; i++) {
             if (document.getElementById("child" + '' + i).classList.contains("active")) {
                 document.getElementById("child" + '' + i).classList.toggle("active");
             }
         }
 
-        for (var i = 1; i <= 1; i++) {
+        for (var i = 1; i <= 6; i++) {
             if (document.getElementById("grandchild" + '' + i).classList.contains("active")) {
                 document.getElementById("grandchild" + '' + i).classList.toggle("active");
             }
@@ -57,7 +57,7 @@ function openNav() {
             if (active_element[i].classList.contains("active")) {
                 active_element[i].classList.toggle("active");
             } else {
-                active_element[i].classList.toggle("noactive");
+                active_element[i].classList.remove("noactive");
             }
         }
 
