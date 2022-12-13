@@ -9,7 +9,7 @@ function mobi() {
 document.body.onload = function () {
     document.getElementsByClassName("container")[0].classList.add("container-loaded");
     setTimeout(document.getElementsByClassName("main-photo")[0].classList.add("main-photo-loaded"));
-    setTimeout(document.getElementsByClassName("text")[0].classList.add("text-loaded"));
+    setTimeout(document.getElementsByClassName("text")[0].classList.add("text-loaded"), 6);
 }
 
 function scrollFunction() {

@@ -172,20 +172,21 @@ nav {
 .text {
     overflow: hidden;
     white-space: nowrap;
-    margin: 20% 0;
+    margin: 7vw 16.5rem;
     border-right: 0.21962vw solid #f3f3f3;
     color: #f3f3f3;
     letter-spacing: 0.21962vw;
     font-family: 'Berkshire Swash', sans-serif;
-    font-size: 3.8vw;
+    font-size: 2.5vw;
     animation:
         typing 1.2s steps(25, end),
         cursor .8s step-end infinite;
     transition: opacity 1s;
-
+    height: fit-content;
 }
 
 .text-loaded {
+    animation-delay: 0.5s;
     opacity: 1;
 }
 
