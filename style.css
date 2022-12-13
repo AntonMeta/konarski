@@ -176,7 +176,7 @@ nav {
 .text {
     overflow: hidden;
     white-space: nowrap;
-    margin: 7vw 16.5rem;
+    margin: 7vw 16vw;
     border-right: 0.21962vw solid #f3f3f3;
     color: #f3f3f3;
     letter-spacing: 0.21962vw;
@@ -465,7 +465,7 @@ nav {
     left: 0;
     top: 0;
     height: 0;
-    z-index: 4;
+    z-index: 91;
     transition: 0.5s;
     display: inline-block;
 }
