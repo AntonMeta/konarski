@@ -496,7 +496,7 @@ nav {
     background: none;
     margin-top: 20px;
     margin-bottom: 20px;
-    width: 100%;
+    width: fit-content;
     text-align: left;
     cursor: pointer;
 }
@@ -512,21 +512,21 @@ nav {
     transition: all 0.3s ease;
 }
 
-.overlay-sidebar ol li button span.noactive {
+.overlay-sidebar ol li button.noactive {
     color: #505050;
     transition: all 0.3s ease;
 }
 
-.overlay-sidebar ol li button:hover span.noactive {
+.overlay-sidebar ol li button:hover.noactive {
     color: #f3f3f3;
     transition: all 0.3s ease;
 }
 
-.overlay-sidebar ol li button span.noactive::after {
+.overlay-sidebar ol li button.noactive::after {
     height: 0;
 }
 
-.overlay-sidebar ol li button span::after {
+.overlay-sidebar ol li button::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -539,7 +539,7 @@ nav {
     transition: transform 0.2s ease-out;
 }
 
-.overlay-sidebar ol li button span:hover:after, .overlay-sidebar ol li button span.active:after {
+.overlay-sidebar ol li button:hover:after, .overlay-sidebar ol li button.active:after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
