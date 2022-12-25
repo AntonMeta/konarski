@@ -176,7 +176,7 @@ nav {
 .text {
     overflow: hidden;
     white-space: nowrap;
-    margin: 7vw 16vw;
+    margin: 7vw 18.7%;
     border-right: 0.21962vw solid #f3f3f3;
     color: #f3f3f3;
     letter-spacing: 0.21962vw;
@@ -289,11 +289,12 @@ nav {
     text-align: center;
     padding-bottom: 5%;
     font-family: 'Noto Serif', serif;
-    font-size: 4.099vw;
+    font-size: 4.5vw;
 }
 
 .about p {
     color: #1e1e1e;
+    font-size: 2vw;
 
 }
 
