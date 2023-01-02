@@ -83,15 +83,22 @@ function initMap() {
 
 window.initMap = initMap;
 
-function setActive(class_name, index) {
-    if (class_name != "none") {
-        var active_element = document.getElementsByClassName(class_name);
-        for (var i = 0; i < active_element.length; i++) {
-            active_element[i].classList.toggle("noactive");
+function setActive(class_name_span, index) {
+    if (class_name_span != "none") {
+        var active_element_span = document.getElementsByClassName(class_name_span);
+        for (var i = 0; i < active_element_span.length; i++) {
+            active_element_span[i].classList.toggle("noactive");
         }
-        active_element[index - 1].classList.toggle("noactive");
-        active_element[index - 1].classList.toggle("active");
+        active_element_span[index - 1].classList.toggle("noactive");
+        active_element_span[index - 1].classList.toggle("active");
     }
+    var active_element_button = document.getElementsByClassName("anim");
+    for (var i = 0; i < active_element_button.length; i++) {
+        if(active_element_button[i].classList.contains("active")) {
+            active_element_button[i].classList.toggle("active");
+        }        
+    }
+    active_element_button[index - 1].classList.toggle("active");
 }
 
 function showChilds(child_type, index, class_active_name, class_anim_name) {

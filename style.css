@@ -488,8 +488,6 @@ nav {
 }
 
 .overlay-sidebar ol {
-
-
     padding: 0px 50px 0;
     list-style: none;
     display: list-item;
@@ -518,17 +516,17 @@ nav {
     transition: all 0.3s ease;
 }
 
-.overlay-sidebar ol li button.noactive {
+.overlay-sidebar ol li button span.noactive {
     color: #505050;
     transition: all 0.3s ease;
 }
 
-.overlay-sidebar ol li button:hover.noactive {
+.overlay-sidebar ol li button span:hover.noactive {
     color: #f3f3f3;
     transition: all 0.3s ease;
 }
 
-.overlay-sidebar ol li button.noactive::after {
+.overlay-sidebar ol li button span.noactive::after {
     height: 0;
 }
 
