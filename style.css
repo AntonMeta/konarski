@@ -593,7 +593,7 @@ nav {
 .overlay-sidebar-children ol {
 
     width: 100%;
-    background-color: #272727;
+    /*background-color: #272727;*/
     padding: 20px 50px 75px 50px;
     list-style: none;
     display: list-item;
@@ -674,7 +674,7 @@ nav {
 }
 
 .overlay-sidebar-grandchildren ol li {
-
+    margin-left: 5%;
     border-bottom: 1px solid #505050;
 }
 

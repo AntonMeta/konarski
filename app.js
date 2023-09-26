@@ -94,9 +94,9 @@ function setActive(class_name_span, index) {
     }
     var active_element_button = document.getElementsByClassName("anim");
     for (var i = 0; i < active_element_button.length; i++) {
-        if(active_element_button[i].classList.contains("active")) {
+        if (active_element_button[i].classList.contains("active")) {
             active_element_button[i].classList.toggle("active");
-        }        
+        }
     }
     active_element_button[index - 1].classList.toggle("active");
 }
