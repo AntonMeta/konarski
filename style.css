@@ -17,6 +17,7 @@ body {
 }
 
 
+
 .container {
     opacity: 0;
     background-color: #505050;
@@ -111,7 +112,6 @@ nav {
     padding: 0;
     position: fixed;
     z-index: 99;
-    -webkit-text-stroke: 1px red;
     margin-top: 0.7vw;
 }
 
@@ -469,23 +469,26 @@ nav {
     z-index: 91;
     transition: 0.5s;
     display: inline-block;
+    overflow-y: hidden;
 }
 
+
 .overlay-sidebar {
-    position: relative;
+    position: fixed;
     top: 100px;
     visibility: hidden;
     height: 100%;
-    overflow-y: auto;
     width: 30%;
     margin-right: 0;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    padding-bottom: 100px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-.overlay-sidebar::-webkit-scrollbar {
+.overlay-sidebar ::-webkit-scrollbar {
     display: none;
 }
+
 
 .overlay-sidebar ol {
     padding: 0px 50px 0;
