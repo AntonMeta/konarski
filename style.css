@@ -321,7 +321,7 @@ nav {
     color: #f3f3f3;
     text-align: center;
     font-family: 'Noto Serif', serif;
-    font-size: 4.099vw;
+    font-size: 4.5vw;
 }
 
 .info-txt {
@@ -332,6 +332,7 @@ nav {
     position: absolute;
     right: 5%;
     text-align: center;
+    font-size: 2vw;
 }
 
 .info-txt h2 {
@@ -362,16 +363,15 @@ nav {
     text-align: left;
     padding-bottom: 5%;
     font-family: 'Noto Serif', serif;
-    font-size: 56px;
+    font-size: 4.5vw;
 }
 
 .news .news-1-line a {
     cursor: pointer;
-    width: 30%;
-    height: 675px;
+    width: 50%;
     background-color: #e5e5e5;
     margin-right: 4.5%;
-    border: #00482d solid 15px;
+    border: #00482d solid 1vw;
     border-radius: 1%;
     transition: all 0.3s ease-out;
     position: relative;
@@ -380,8 +380,8 @@ nav {
 }
 
 .news .news-1-line a img {
-    height: auto;
-    width: 80%;
+    height: 20vw;
+    width: 23vw;
     display: block;
     margin: 5% auto 5% auto;
     transition: all 0.3s ease-out;
@@ -389,7 +389,8 @@ nav {
 
 .news .news-1-line a h1 {
     color: #1e1e1e;
-    font-size: 30px;
+    font-size: 3vmin;
+    font-weight: bolder;
     margin-left: 5%;
     transition: all 0.3s ease-out;
     position: relative;
@@ -399,60 +400,66 @@ nav {
 .news .news-1-line a p {
     margin: 5% 5% 5% 5%;
     transition: all 0.3s ease-out;
+    font-size: 2.0vmin;
 }
 
-.news .news-1-line a span {
-    position: absolute;
-    text-align: center;
-    color: #505050;
-    bottom: 18px;
-    right: auto;
-    left: 123px;
-    transition: all 0.3s ease-out;
+@media only screen and (max-width: 600px) {
+
 }
 
-.news .news-1-line a span span {
-    position: relative;
-    left: 0;
-    transform: translateY(24px) rotate(90deg);
-}
-
-.news .news-1-line a:hover {
-    border: #00482d solid 1px;
-    background-color: #fff;
-    transition: all 0.3s ease-out;
-}
-
-.news .news-1-line a:hover img {
-    width: 90%;
-    height: auto;
-    margin: 2.5% auto 2.5% auto;
-    transition: all 0.5s ease-out;
-}
-
-.news .news-1-line a:hover h1 {
-    margin-left: calc(5% + 14px);
-    transition: all 0.3s ease-out;
-}
-
-.news .news-1-line a:hover p {
-    margin-left: calc(5% + 14px);
-    margin-right: calc(5% + 14px);
-    transition: all 0.3s ease-out;
-}
-
-.news .news-1-line a:hover span {
-    color: #1e1e1e;
-    right: auto;
-    left: 137px;
-    transition: all 0.3s ease-out;
-}
-
-.news .news-1-line a:hover span span {
-    left: 0;
-    transform: translateY(24px) rotate(270deg);
-}
-
+/*  */
+/* .news .news-1-line a span { */
+    /* position: absolute; */
+    /* text-align: center; */
+    /* color: #505050; */
+    /* bottom: 18px; */
+    /* right: auto; */
+    /* left: 123px; */
+    /* transition: all 0.3s ease-out; */
+/* } */
+/*  */
+/* .news .news-1-line a span span { */
+    /* position: relative; */
+    /* left: 0; */
+    /* transform: translateY(24px) rotate(90deg); */
+/* } */
+/*  */
+/* .news .news-1-line a:hover { */
+    /* border: #00482d solid 1px; */
+    /* background-color: #fff; */
+    /* transition: all 0.3s ease-out; */
+/* } */
+/*  */
+/* .news .news-1-line a:hover img { */
+    /* width: 90%; */
+    /* height: auto; */
+    /* margin: 2.5% auto 2.5% auto; */
+    /* transition: all 0.5s ease-out; */
+/* } */
+/*  */
+/* .news .news-1-line a:hover h1 { */
+    /* margin-left: calc(5% + 14px); */
+    /* transition: all 0.3s ease-out; */
+/* } */
+/*  */
+/* .news .news-1-line a:hover p { */
+    /* margin-left: calc(5% + 14px); */
+    /* margin-right: calc(5% + 14px); */
+    /* transition: all 0.3s ease-out; */
+/* } */
+/*  */
+/* .news .news-1-line a:hover span { */
+    /* color: #1e1e1e; */
+    /* right: auto; */
+    /* left: 137px; */
+    /* transition: all 0.3s ease-out; */
+/* } */
+/*  */
+/* .news .news-1-line a:hover span span { */
+    /* left: 0; */
+    /* transform: translateY(24px) rotate(270deg); */
+/* } */
+/*  */
 .news .news-1-line a:last-child {
     margin-right: 0;
 }
