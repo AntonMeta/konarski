@@ -483,6 +483,8 @@ nav {
     padding-bottom: 100px;
     overflow-y: scroll;
     overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .overlay-sidebar ::-webkit-scrollbar {
