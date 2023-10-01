@@ -349,13 +349,12 @@ nav {
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 5%;
-    padding-bottom: 10%;
 }
 
 .news .news-1-line {
     width: 100%;
     display: inline-flex;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
 }
 
 .news h1 {
@@ -368,15 +367,21 @@ nav {
 
 .news .news-1-line a {
     cursor: pointer;
-    width: 50%;
     background-color: #e5e5e5;
     margin-right: 4.5%;
+    margin-bottom: 5%;
     border: #00482d solid 1vw;
     border-radius: 1%;
     transition: all 0.3s ease-out;
-    position: relative;
+    flex: 1 1 30%;
     text-decoration: none;
     color: #1e1e1e;
+}
+
+@media only screen and (min-width: 768px) {
+    .news .news-1-line a {
+        flex: min-content;
+    }
 }
 
 .news .news-1-line a img {
@@ -403,8 +408,10 @@ nav {
     font-size: 2.0vmin;
 }
 
-@media only screen and (max-width: 600px) {
-
+.news .news-1-line a span {
+    font-size: 2vmin;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 /*  */
@@ -460,9 +467,6 @@ nav {
     /* transform: translateY(24px) rotate(270deg); */
 /* } */
 /*  */
-.news .news-1-line a:last-child {
-    margin-right: 0;
-}
 
 .overlay {
     width: 100%;
@@ -671,7 +675,6 @@ nav {
 }
 
 .overlay-sidebar-grandchildren ol {
-
     width: 100%;
     margin-top: 50px;
     padding: 20px 75px 0;
@@ -712,19 +715,19 @@ nav {
 footer {
     display: flex;
     align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    height: 10vmin;
 }
 
 .line {
     flex: 1;
-    height: 2px;
+    height: 0.2vmin;
     background-color: #f3f3f3;
 }
 
 footer p {
     padding: 0 2rem;
     color: #f3f3f3;
+    font-size: 1.5vmin;
     font-weight: bolder;
 }
 
