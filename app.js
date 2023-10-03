@@ -35,6 +35,7 @@ function openNav() {
             document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "visible";
         }, 200);
         setTimeout(slideIn(), 200)
+        document.getElementsByClassName("container").classList.toggle("opened");
     }
     else {
         document.getElementById("myNav").style.height = "0%";

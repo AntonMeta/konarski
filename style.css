@@ -16,7 +16,9 @@ body {
     /* background-color: #00482d; */
 }
 
-
+body .slided {
+    overflow-y: hidden;
+}
 
 .container {
     opacity: 0;
