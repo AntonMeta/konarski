@@ -27,44 +27,53 @@ function topFunction() {
 }
 
 var menu = document.getElementById("navBtn");
+var navi = document.getElementById("myNav");
+
+function menuSlide() {
+    menu.classList.toggle("opened");
+    menu.setAttribute("aria-expanded", menu.classList.contains("opened"));
+    openNav()
+}
 
 function openNav() {
-    if (menu.classList.contains('opened')) {
-        document.getElementById("myNav").style.height = "100%";
+    if (menu.classList.contains("opened")) {
+        slideOut2();
+        navi.style.height = "100%";
         setTimeout(function () {
             document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "visible";
-        }, 200);
-        setTimeout(slideIn(), 200)
-    }
-    else {
-        document.getElementById("myNav").style.height = "0%";
-        document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "hidden";
-
+        }, 300);
+        setTimeout(slideIn(), 300);
+    } else {
+        
         for (var i = 1; i <= 5; i++) {
             if (document.getElementById("child" + '' + i).classList.contains("active")) {
-                document.getElementById("child" + '' + i).classList.toggle("active");
+                document.getElementById("child" + '' + i).classList.remove("active");
             }
         }
-
+        
         for (var i = 1; i <= 6; i++) {
             if (document.getElementById("grandchild" + '' + i).classList.contains("active")) {
-                document.getElementById("grandchild" + '' + i).classList.toggle("active");
+                document.getElementById("grandchild" + '' + i).classList.remove("active");
             }
         }
-
+        
         var active_element = document.getElementsByClassName("span_first");
         for (var i = 0; i < active_element.length; i++) {
             if (active_element[i].classList.contains("active")) {
-                active_element[i].classList.toggle("active");
+                active_element[i].classList.remove("active");
             } else {
                 active_element[i].classList.remove("noactive");
             }
         }
-
-        var btn = document.getElementsByClassName("anim");
-        for (var i = 0; i < 5; i++) {
-            btn[i].classList.remove("animate__animated", "animate__fadeInDown");
-        }
+        
+        //MENU + SIDEBAR SLIDE 
+        slideIn2();
+        document.getElementsByClassName("overlay-sidebar")[0].style.visibility = "hidden";
+        slideOut();
+        setTimeout(function () {
+            navi.style.height = "0%";
+        }, 150);
+        //MENU + SIDEBAR SLIDE
     }
 }
 
@@ -120,7 +129,7 @@ function showChilds(child_type, index, class_active_name, class_anim_name) {
         var over1ay_sidebar_grandchildren = document.getElementsByClassName("overlay-sidebar-grandchildren");
         for (var i = 0; i < over1ay_sidebar_grandchildren.length; i++) {
             if (over1ay_sidebar_grandchildren[i].classList.contains("active")) {
-                over1ay_sidebar_grandchildren[i].classList.toggle("active");
+                over1ay_sidebar_grandchildren[i].classList.remove("active");
             }
         }
         var active = document.getElementsByClassName("mother");
@@ -143,6 +152,24 @@ function slideIn() {
     var btn = document.getElementsByClassName("anim");
     for (var i = 0; i < 5; i++) {
         btn[i].classList.add("animate__animated", "animate__fadeInDown");
+    }
+}
+function slideIn2() {
+    var btn = document.getElementsByClassName("anim");
+    for (var i = 0; i < 5; i++) {
+        btn[i].classList.remove("animate__animated", "animate__fadeInDown");
+    }
+}
+function slideOut() {
+    var btn = document.getElementsByClassName("anim");
+    for (var i = 0; i < 5; i++) {
+        btn[i].classList.add("animate__animated", "animate__fadeOutUp");
+    }
+}
+function slideOut2() {
+    var btn = document.getElementsByClassName("anim");
+    for (var i = 0; i < 5; i++) {
+        btn[i].classList.remove("animate__animated", "animate__fadeOutUp");
     }
 }
 function scrollDown() {

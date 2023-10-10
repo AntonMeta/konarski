@@ -537,7 +537,7 @@ nav {
 /* } */
 
 .anim {
-    --animate-duration: 0.7s;
+    --animate-duration: 1s;
 }
 
 .anim2 {
